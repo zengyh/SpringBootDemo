@@ -1,4 +1,4 @@
-package codex.terry.entity;
+package codex.terry.codex.terry.entity;
 
 /**
  * 编写人: yh.zeng

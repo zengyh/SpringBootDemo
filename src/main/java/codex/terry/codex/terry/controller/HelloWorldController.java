@@ -1,4 +1,4 @@
-package codex.terry.controller;
+package codex.terry.codex.terry.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

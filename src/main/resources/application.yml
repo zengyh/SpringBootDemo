@@ -3,7 +3,8 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@172.40.1.20:1521:matedb
     driverClassName: oracle.jdbc.driver.OracleDriver
-    username: root
+    username: wxuser
+    password: wx_user.015
   jpa:
     database: ORACLE
     show-sql: true
@@ -11,7 +12,7 @@ spring:
       ddl-auto: update
       naming:
         strategy: org.hibernate.cfg.ImprovedNamingStrategy
-
 server:
   port: 80
+
 

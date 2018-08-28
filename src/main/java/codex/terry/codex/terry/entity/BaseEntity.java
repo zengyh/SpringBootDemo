@@ -1,4 +1,4 @@
-package codex.terry.entity;
+package codex.terry.codex.terry.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
