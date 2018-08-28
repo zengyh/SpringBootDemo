@@ -1,6 +1,5 @@
 package codex.terry.controller;
 
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,12 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
  * 文件描述:
  */
 @RestController
-@RequestMapping(value = "/hello")
 public class HelloWorldController {
 
-    @RequestMapping(value = "/{content}")
-    private String hello(@PathVariable("content") String conent){
-        return conent;
+    @RequestMapping(value = "/hello")
+    public String hello(){
+        return "Hello SpringBoot!";
     }
 
 }
