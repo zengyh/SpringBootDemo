@@ -1,6 +1,6 @@
 package codex.terry;
 
-import codex.terry.codex.terry.controller.HelloWorldController;
+import codex.terry.controller.HelloWorldController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

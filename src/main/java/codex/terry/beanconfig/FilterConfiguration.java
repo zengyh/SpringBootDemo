@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Configuration;
  * 文件描述: 注册Bean
  */
 @Configuration
-public class WebConfiguration {
+public class FilterConfiguration
+{
 /*    @Bean
     public RemoteIpFilter remoteIpFilter() {
         return new RemoteIpFilter();

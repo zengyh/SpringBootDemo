@@ -127,7 +127,7 @@
 			</resource>
 			<!-- Maven只打包src/main/profile目录下的application-${active.profile}.properties和log4j2-${active.profile}.xml文件-->
 			<resource>
-				<directory>src/main/profile</directory>
+				<directory>src/main/profiles</directory>
 				<includes>
 					<include>**/application-${active.profile}.properties</include>
 					<include>**/log4j2-${active.profile}.xml</include>
