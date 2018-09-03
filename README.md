@@ -13,7 +13,7 @@
 5. src/test，测试代码存放路径
 
 注意：
-项目依赖的本地第三方jar包(既Maven仓库上没有的jar包，只能网上找其它资源下载的)，放在了libs\路径之后，还要在pom中配置，如下：<br>
+项目依赖的本地第三方jar包(既Maven仓库上没有的jar包，只能网上找其它资源下载的)，放在了libs\路径之后，还要在pom.xml中配置，如下：<br>
 		&lt;!-- 添加 ODBC 驱动包 --&gt;<br>
 		&lt;dependency&gt;<br>
 			&lt;groupId&gt;com.oracle&lt;/groupId&gt;<br>
