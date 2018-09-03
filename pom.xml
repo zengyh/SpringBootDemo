@@ -155,7 +155,7 @@
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<configuration>
-					<!-- 配置资源文件中的变量分隔符，这里配置了两种变量分隔符 -->
+					<!-- 配置资源文件中的变量分隔符（标识符），这里配置了两种变量分隔符 -->
 					<delimiters>
 						<delimiter>${*}</delimiter> <!-- 以${}为分隔符，例如 ${jdbc.url}  -->
 						<delimiter>@</delimiter>    <!-- 以@为分隔符，例如 @jdbc.url@ -->
