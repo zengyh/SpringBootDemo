@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 编写人: yh.zeng
  * 编写时间: 2018-8-28
- * 文件描述: 注册Bean
+ * 文件描述: 注册Filter Bean
  */
 @Configuration
 public class FilterConfiguration
