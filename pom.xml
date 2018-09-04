@@ -6,7 +6,7 @@
 	<groupId>codex.terry</groupId>
 	<artifactId>SpringBootDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging> <!-- 必须打包war，否则访问不了jsp页面，Spring Boot对Jsp不是很支持-->
 
 	<name>SpringBootDemo</name>
 	<description>Demo project for Spring Boot</description>
@@ -85,6 +85,29 @@
            <version>${com.lmax.disruptor}</version>
         </dependency>
         <!-- end -->
+		<!-- servlet 依赖 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<!-- end -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!--用于编译jsp-->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<!--<scope>provided</scope>-->
+		</dependency>
+		<!-- end -->
 	</dependencies>
 
 	<!--实现多环境配置打包-->
@@ -138,6 +161,7 @@
 			<!-- end -->
 			<!-- 将libs/目录下的第三方jar包也打包进项目，只对将项目打包成jar形式的文件有效！ -->
 			<!--      第三包jar包，既Maven仓库上没有的jar包，只能网上找其它资源下载的 -->
+			<!--
 			<resource>
 				<directory>libs</directory>
 				<includes>
@@ -145,7 +169,11 @@
 				</includes>
 				<targetPath>BOOT-INF/lib/</targetPath>
 			</resource>
+			-->
 			<!-- end -->
+			<resource>
+				<directory>src/main/webapp</directory>
+			</resource>
 		</resources>
 		<plugins>
 			<plugin>
@@ -162,9 +190,9 @@
 					</delimiters>
 				</configuration>
 			</plugin>
+			<!-- end -->
 			<!--maven-war-plugins插件，将libs/目录下的第三方jar包也打包进项目，只对将项目打包成war形式的文件有效！-->
 			<!--      第三包jar包，既Maven仓库上没有的jar包，只能网上找其它资源下载的 -->
-			<!--
             <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -180,7 +208,6 @@
 					</webResources>
 				</configuration>
 			</plugin>
-			-->
 			<!-- end -->
 		</plugins>
 	</build>

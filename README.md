@@ -3,8 +3,8 @@
 项目文件夹介绍：<br>
 1. libs，项目依赖的本地第三方jar包存放位置(既Maven仓库上没有的jar包，只能网上找其它资源下载的) <br>
 2. src/main/java，代码存放路径 <br>
-  2.1 codex.terry.beanconfig Bean实例注册<br>
-     &nbsp;&nbsp;&nbsp;&nbsp;2.1.1 codex.terry.beanconfig.FilterConfiguration 注册Filter过滤器<br>
+  2.1 codex.terry.webxml 代替web.xml的Java配置代码<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;2.1.1 codex.terry.webxml.FilterConfiguration 注册Filter过滤器<br>
   2.2 codex.terry.controller Controller目录<br>
   2.3 codex.terry.entity 实体类目录<br>
   2.4 codex.terry.filter 过滤器目录<br>
@@ -12,7 +12,7 @@
 4. src/main/profiles，多个环境（开发dev、测试test、生产prod）配置文件存放路径 <br>
 5. src/test，测试代码存放路径<br>
 6. src/main/webapp/WEB-INF/jsp，jsp页面存放路径<br>
-7. src/main/resources/static，静态资源存放路径
+7. src/main/webapp/WEB-INF/static，静态资源存放路径
 
 注意事项：<br>
 1. 项目依赖的本地第三方jar包(既Maven仓库上没有的jar包，只能网上找其它资源下载的)，放在了libs\路径之后，还要在pom.xml中配置，如下：<br>

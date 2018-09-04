@@ -1,4 +1,4 @@
-package codex.terry.beanconfig;
+package codex.terry.webxml;
 
 import codex.terry.filter.PathFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
