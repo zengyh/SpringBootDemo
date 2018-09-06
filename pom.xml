@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>codex.terry</groupId>
-	<artifactId>SpringBootDemo</artifactId>
+	<artifactId>SpringBootWebDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging> <!-- 必须打包war，否则访问不了jsp页面，Spring Boot对Jsp不是很支持-->
 
-	<name>SpringBootDemo</name>
+	<name>SpringBootWebDemo</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
