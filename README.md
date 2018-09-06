@@ -1,5 +1,7 @@
 项目架构：Spring Boot + Log4j2 + Hibernate + jsp
 
+项目管理工具：Maven
+
 项目文件夹介绍：<br>
 1. libs，项目依赖的本地第三方jar包存放位置(既Maven仓库上没有的jar包，只能网上找其它资源下载的) <br>
 2. src/main/java，代码存放路径 <br>
@@ -29,3 +31,7 @@
    设置步骤：<br>
       左上角，File中点击Project Structure项，在Modules选项卡中，找到Web模块，在Web Resource Directories中点击+添加Web Resource Directory。<br>
    也可以参考博客<a href="https://blog.csdn.net/yh_zeng2/article/details/82377985">《【IntelliJ IDEA】使用idea解决新建jsp文件而找不到jsp文件模版的新建选项》</a>
+   
+3. 项目的JDK必须是1.8
+
+4. Maven配置的JDK版本必须是1.8
