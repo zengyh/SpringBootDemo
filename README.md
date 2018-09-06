@@ -1,4 +1,4 @@
-项目架构：Spring Boot + Log4j2 + Hibernate
+项目架构：Spring Boot + Log4j2 + Hibernate + jsp
 
 项目文件夹介绍：<br>
 1. libs，项目依赖的本地第三方jar包存放位置(既Maven仓库上没有的jar包，只能网上找其它资源下载的) <br>
