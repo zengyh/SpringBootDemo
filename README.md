@@ -2,7 +2,9 @@
 
 项目管理工具：Maven
 
-项目启动方式：和普通的Web应用一样，配置外置Tomcat进行启动
+项目启动方式：<br>
+和普通的Web应用一样，Run/Debug Configurations 配置外置Tomcat 运行项目，<br>
+但是，<font color="red">项目运行前，必须先打包（package）成war包！</font>
 
 
 项目文件夹介绍：<br>

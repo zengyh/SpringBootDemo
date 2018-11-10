@@ -15,9 +15,6 @@ public class Application extends SpringBootServletInitializer
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
-		/*SpringApplication app = new SpringApplication(Application.class);
-		app.setBannerMode(Banner.Mode.OFF);
-		app.run(args);*/
 	}
 
 	@Override
