@@ -35,3 +35,13 @@
 3. 项目的JDK必须是1.8
 
 4. Maven配置的JDK版本必须是1.8
+
+5. 要使用SpringBoot热部署必须注意
+   当项目使用的是Intellij Idea，那么必须修改以下两个地方<br>
+   5.1 勾上自动编译或者手动重新编译<br>
+       File ——》 Settings ——》 Compiler ——》 Build Project automatically<br>
+   5.2 注册
+       ctrl + shift + alt + / ——》 Registry ——》 勾选Compiler autoMake allow when app running
+   
+6. IDE插件必须安装Lombok插件，否则有的类会报“No Such Method”，但项目编译运行是没问题的！只是IDE中看起来红色的，IDE会提醒错误！ 
+具体的安装办法可参考文档 <a href="https://blog.csdn.net/yh_zeng2/article/details/81989902">《Eclipse安装Lombok插件》</a>

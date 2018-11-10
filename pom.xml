@@ -159,6 +159,7 @@
 			<!-- end -->
 			<!-- 将libs/目录下的第三方jar包也打包进项目，只对将项目打包成jar形式的文件有效！ -->
 			<!--      第三包jar包，既Maven仓库上没有的jar包，只能网上找其它资源下载的 -->
+			<!--      项目不打包成jar包，则可以去掉该项配置，否则必须配置-->
 			<!--
 			<resource>
 				<directory>libs</directory>
@@ -191,6 +192,7 @@
 			<!-- end -->
 			<!--maven-war-plugins插件，将libs/目录下的第三方jar包也打包进项目，只对将项目打包成war形式的文件有效！-->
 			<!--      第三包jar包，既Maven仓库上没有的jar包，只能网上找其它资源下载的 -->
+			<!--      项目不打包成war包，则可以去掉该项配置，否则必须配置-->
             <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -209,4 +211,58 @@
 			<!-- end -->
 		</plugins>
 	</build>
+	
+	<!-- repositories 配置远程仓库 -->
+	<!-- 1、先从settings.xml配置的仓库<repositories>中下载构建（即jar包），如果没有该构建，则从pom.xml的<repositories>中下载-->
+	<!-- 2、构建的下载，按照配置的仓库的先后顺序来查找和下载-->
+	<!-- 3、【特别注意】 如果 settings.xml配置了mirrors镜像仓库，则该配置无效！【不】会从pom.xml的<repositories>中下载，只会从mirrors镜像仓库中查找下载！-->
+	<repositories>
+	    <repository>
+	        <id>nexus-aliyun</id>
+	        <name>Nexus aliyun</name>
+	        <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	    <repository>
+	        <id>Central2</id>
+	        <name>Central Repository</name>
+	        <url>http://central.maven.org/maven2</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
+    <pluginRepositories>
+        <pluginRepository>
+	        <id>nexus-aliyun</id>
+	        <name>Nexus aliyun</name>
+	        <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+	        <id>Central2</id>
+	        <name>Central Repository</name>
+	        <url>http://central.maven.org/maven2</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
