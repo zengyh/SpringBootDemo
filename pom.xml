@@ -33,12 +33,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 			<exclusions>
-				<!-- 排除自带的Logback日志工具依赖，为了项目使用Log4j2日志打印工具 -->
+				<!-- 排除（不使用）自带的Logback日志工具依赖，为了项目使用Log4j2日志打印工具 -->
 			    <exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
 			    </exclusion>
-				<!--排除SpringBoot内嵌的Tomcat，项目使用外置的Tomcat-->
+				<!--排除（不使用）SpringBoot内嵌的Tomcat，项目使用外置的Tomcat-->
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-tomcat</artifactId>
