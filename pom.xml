@@ -32,12 +32,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<!-- 排除自带的Logback日志工具依赖，为了项目使用Log4j2日志打印工具 -->
 			<exclusions>
+				<!-- 排除自带的Logback日志工具依赖，为了项目使用Log4j2日志打印工具 -->
 			    <exclusion>
-				     <groupId>org.springframework.boot</groupId>
-				     <artifactId>spring-boot-starter-logging</artifactId>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
 			    </exclusion>
+				<!--排除SpringBoot内嵌的Tomcat，项目使用外置的Tomcat-->
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -96,16 +101,17 @@
 			<artifactId>jstl</artifactId>
 		</dependency>
 		<!-- end -->
-		<dependency>
+<!--		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency>
+		</dependency>-->
+		<!--
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
-			<!--<scope>provided</scope>-->
 		</dependency>
+	    -->
 	</dependencies>
 
 	<!--实现多环境配置打包-->
@@ -140,6 +146,8 @@
 	</profiles>
 	
 	<build>
+		<!-- 项目打包（packaging）后的文件名，去掉了后缀 -->
+	    <finalName>${project.artifactId}</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>

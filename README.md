@@ -2,6 +2,9 @@
 
 项目管理工具：Maven
 
+项目启动方式：和普通的Web应用一样，配置外置Tomcat进行启动
+
+
 项目文件夹介绍：<br>
 1. libs，项目依赖的本地第三方jar包存放位置(既Maven仓库上没有的jar包，只能网上找其它资源下载的) <br>
 2. src/main/java，代码存放路径 <br>
@@ -45,3 +48,5 @@
    
 6. IDE插件必须安装Lombok插件，否则有的类会报“No Such Method”，但项目编译运行是没问题的！只是IDE中看起来红色的，IDE会提醒错误！ 
 具体的安装办法可参考文档 <a href="https://blog.csdn.net/yh_zeng2/article/details/81989902">《Eclipse安装Lombok插件》</a>
+
+7. 使用外置Tomcat，建议版本8.0以上，个人使用的版本是8.5
