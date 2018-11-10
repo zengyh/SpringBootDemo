@@ -13,6 +13,6 @@ public class Application {
 		//SpringApplication.run(Application.class, args);
 		SpringApplication app = new SpringApplication(Application.class);
 		app.setBannerMode(Banner.Mode.OFF);
-		app.run();
+		app.run(args);
 	}
 }
