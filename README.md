@@ -4,7 +4,7 @@
 
 项目启动方式：<br>
 和普通的Web应用一样，Run/Debug Configurations 配置外置Tomcat 运行项目，
-<h4>但是，项目运行前，必须先打包（package）成war包！</h4>
+<h4>但是，项目运行前，必须先打包（package）成war包！</h4> <br>
 
 
 项目文件夹介绍：<br>
