@@ -206,6 +206,23 @@
 				</configuration>
 			</plugin>
 			<!-- end -->
+			<!-- compile、test、package等操作之前都先进行clean，所以无需手动clean -->
+			<!-- 目前没有问题，假设以后该插件的配置不兼容了，可以去掉！-->
+			<!-- 如果去掉了该项配置，就需要执行这些步骤之前，手动【clean】以下， -->
+			<!--   否则，打包的资源文件里面，会包含多个环境(profile)的properties，虽然不影响程序运行，但是且包含了不必要（别的环境）的配置文件！！-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<executions>
+					<execution>
+                        <phase>validate</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+                    </execution>
+				</executions>
+			</plugin>
+			<!-- end -->
 		</plugins>
 	</build>
 	

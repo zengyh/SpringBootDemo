@@ -3,8 +3,13 @@
 项目管理工具：Maven
 
 项目启动方式：<br>
-和普通的Web应用一样，Run/Debug Configurations 配置外置Tomcat 运行项目，
-<h4>但是，项目运行前，必须先打包（package）成war包！</h4> <br>
+1、IDE 通过 Run/Debug Configurations 配置外置Tomcat         <br>
+2、执行Maven clean，清理掉上一次构建生成的所有文件，这一步可以省掉！
+  目前pom.xml里面配置了package之前会自动执行clean，
+  前提是该配置在以后的Maven版本都兼容的情况下！！！               <br>
+3、执行Maven package 生产成war包！                           <br>
+4、IDE 运行Tomcat                                          <br>
+
 
 
 项目文件夹介绍：<br>
@@ -52,3 +57,23 @@
 具体的安装办法可参考文档 <a href="https://blog.csdn.net/yh_zeng2/article/details/81989902">《Eclipse安装Lombok插件》</a>
 
 7. 使用外置Tomcat，建议版本8.0以上，个人使用的版本是8.5
+
+8. pom.xml里面配置了package之前会自动执行clean，以后的Maven版本可能不兼容！！那么就需要去掉该项配置，并且每次打包（pacakge）之前都要clean！！ 
+
+			<!-- compile、test、package等操作之前都先进行clean，所以无需手动clean -->
+			<!-- 目前没有问题，假设以后该插件的配置不兼容了，可以去掉！-->
+			<!-- 如果去掉了该项配置，就需要执行这些步骤之前，手动【clean】以下， -->
+			<!--   否则，打包的资源文件里面，会包含多个环境(profile)的properties，虽然不影响程序运行，但是且包含了不必要（别的环境）的配置文件！！-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<executions>
+					<execution>
+                        <phase>validate</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+                    </execution>
+				</executions>
+			</plugin>
+			<!-- end -->
