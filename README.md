@@ -5,7 +5,7 @@
 项目启动方式：<br>
 1、IDE 通过 Run/Debug Configurations 配置外置Tomcat         <br>
 2、执行Maven clean，清理掉上一次构建生成的所有文件，这一步可以省掉！
-  目前pom.xml里面配置了package之前会自动执行clean，
+  因为，目前pom.xml里面配置了package之前会自动执行clean，
   前提是该配置在以后的Maven版本都兼容的情况下！！！               <br>
 3、执行Maven package 生产成war包！                           <br>
 4、IDE 运行Tomcat                                          <br>
